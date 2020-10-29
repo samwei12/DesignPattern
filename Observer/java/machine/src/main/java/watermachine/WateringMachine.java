@@ -1,19 +1,19 @@
 package watermachine;
 
+import java.util.Observable;
+import java.util.Observer;
+
 /**
  * @author xiaosen.dxs@alibaba-inc.com
  * @date 2020/10/29 4:22 PM
  */
-public class WateringMachine {
-    private boolean status;
-
-    public boolean getStatus()
-    {
-        return status;
-    }
-
-    public void start()
-    {
-        status = true;
+public class WateringMachine extends Machine implements Observer {
+    public void update(Observable o, Object arg) {
+        if (o instanceof WeatherData) {
+            WeatherData data = (WeatherData)o;
+            if (data.getTemp() > WeatherData.WATERING_TEMP && data.getHumidity() < WeatherData.WATERING_HUMIDITY && data.getWindPower() < WeatherData.WATERING_WIND) {
+                start();
+            }
+        }
     }
 }
