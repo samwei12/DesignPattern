@@ -14,6 +14,9 @@ public class SeedingMachine extends Machine implements Observer {
             if (data.getTemp() > WeatherData.SEEDING_TEMP) {
                 start();
             }
+            else {
+                stop();
+            }
         }
     }
 }

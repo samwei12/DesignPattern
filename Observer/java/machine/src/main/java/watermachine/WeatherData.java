@@ -51,6 +51,7 @@ public class WeatherData extends Observable {
     }
 
     public void measurementsChanged() {
+        setChanged();
         measurementsChanged(this.temp, this.humidity, this.windPower);
     }
 

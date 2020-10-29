@@ -15,6 +15,18 @@ public abstract class Machine {
 
     public void start()
     {
+        if (status) {
+            return;
+        }
         status = true;
+        System.out.println(this.getClass().getName() +": start");
+    }
+
+    public void stop() {
+        if (!status) {
+            return;
+        }
+        status = false;
+        System.out.println(this.getClass().getName() +": stop");
     }
 }

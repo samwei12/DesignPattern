@@ -14,6 +14,9 @@ public class WateringMachine extends Machine implements Observer {
             if (data.getTemp() > WeatherData.WATERING_TEMP && data.getHumidity() < WeatherData.WATERING_HUMIDITY && data.getWindPower() < WeatherData.WATERING_WIND) {
                 start();
             }
+            else {
+                stop();
+            }
         }
     }
 }

@@ -14,6 +14,9 @@ public class ReapingMachine extends Machine implements Observer {
             if (data.getTemp() > WeatherData.SEEDING_TEMP && data.getHumidity() > WeatherData.REAPING_HUMIDITY) {
                 start();
             }
+            else {
+                stop();
+            }
         }
     }
 }
