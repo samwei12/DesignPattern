@@ -6,7 +6,7 @@ import java.util.Observable;
  * @author xiaosen.dxs@alibaba-inc.com
  * @date 2020/10/29 4:22 PM
  */
-public class WeatherData extends Observable{
+public class WeatherData extends Observable {
     public static final int SEEDING_TEMP = 5;
     public static final int REAPING_HUMIDITY = 65;
     public static final int WATERING_HUMIDITY = 55;
@@ -44,8 +44,7 @@ public class WeatherData extends Observable{
         measurementsChanged();
     }
 
-    public WeatherData(SeedingMachine seedingMachine, ReapingMachine reapingMachine, WateringMachine wateringMachine)
-    {
+    public WeatherData(SeedingMachine seedingMachine, ReapingMachine reapingMachine, WateringMachine wateringMachine) {
         addObserver(seedingMachine);
         addObserver(reapingMachine);
         addObserver(wateringMachine);
@@ -55,8 +54,7 @@ public class WeatherData extends Observable{
         measurementsChanged(this.temp, this.humidity, this.windPower);
     }
 
-    public void measurementsChanged(int temp, int humidity, int windPower)
-    {
+    public void measurementsChanged(int temp, int humidity, int windPower) {
         notifyObservers();
     }
 }
