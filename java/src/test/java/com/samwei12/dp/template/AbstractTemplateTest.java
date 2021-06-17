@@ -1,8 +1,6 @@
-package com.samwei12.dp.Template;
+package com.samwei12.dp.template;
 
 import org.junit.Test;
-
-import static org.junit.Assert.*;
 
 /**
  * @author samwei12

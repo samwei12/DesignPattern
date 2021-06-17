@@ -1,4 +1,4 @@
-package com.samwei12.dp.Template;
+package com.samwei12.dp.template;
 
 import lombok.extern.slf4j.Slf4j;
 
