@@ -1,7 +1,7 @@
 package com.samwei12.dp.creational.simplefactory.door;
 
 /**
- * 文件描述
+ * 封装了门的通用属性
  *
  * @author samwei12
  * @date 2024/9/3
