@@ -1,4 +1,4 @@
-package com.samwei12.dp.factory;
+package com.samwei12.dp.creational.factory;
 
 /**
  * @author samwei12
