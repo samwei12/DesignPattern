@@ -7,7 +7,7 @@ import java.util.Observer;
  * @author xiaosen.dxs@alibaba-inc.com
  * @date 2020/10/29 4:22 PM
  */
-public class WateringMachine extends Machine implements Observer {
+public class WateringMachine extends AbstractMachine {
     public void update(Observable o, Object arg) {
         if (o instanceof WeatherData) {
             WeatherData data = (WeatherData)o;

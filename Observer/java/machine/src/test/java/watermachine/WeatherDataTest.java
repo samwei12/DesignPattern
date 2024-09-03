@@ -1,5 +1,8 @@
 package watermachine;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.junit.Before;
 import org.junit.Test;
 
@@ -9,17 +12,16 @@ import org.junit.Test;
  */
 public class WeatherDataTest {
     private WeatherData weatherData;
-    private ReapingMachine reapingMachine;
-    private SeedingMachine seedingMachine;
-    private WateringMachine wateringMachine;
+    private List<AbstractMachine> machines;
 
     @Before
     public void setUp() throws Exception {
-        reapingMachine = new ReapingMachine();
-        seedingMachine = new SeedingMachine();
-        wateringMachine = new WateringMachine();
+        machines = new ArrayList<AbstractMachine>();
+        machines.add(new ReapingMachine());
+        machines.add(new SeedingMachine());
+        machines.add(new WateringMachine());
 
-        weatherData = new WeatherData(seedingMachine, reapingMachine, wateringMachine);
+        weatherData = new WeatherData(machines);
     }
 
     @Test

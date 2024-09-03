@@ -1,5 +1,6 @@
 package watermachine;
 
+import java.util.List;
 import java.util.Observable;
 
 /**
@@ -44,10 +45,14 @@ public class WeatherData extends Observable {
         measurementsChanged();
     }
 
-    public WeatherData(SeedingMachine seedingMachine, ReapingMachine reapingMachine, WateringMachine wateringMachine) {
-        addObserver(seedingMachine);
-        addObserver(reapingMachine);
-        addObserver(wateringMachine);
+    public WeatherData(List<AbstractMachine> machines) {
+        if (machines == null) {
+            return;
+        }
+        for (AbstractMachine machine :
+            machines) {
+            addObserver(machine);
+        }
     }
 
     public void measurementsChanged() {
