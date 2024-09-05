@@ -1,4 +1,4 @@
-package com.samwei12.dp.creational.factory.interviewer.extend;
+package com.samwei12.dp.creational.factory.interviewer.concrete;
 
 import com.samwei12.dp.creational.factory.interviewer.Interviewer;
 
