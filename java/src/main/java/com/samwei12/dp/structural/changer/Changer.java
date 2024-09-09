@@ -1,4 +1,4 @@
-package com.samwei12.dp.decorator.changer;
+package com.samwei12.dp.structural.changer;
 
 /**
  * Decorator 抽象装饰类，用于对现有的变形金刚类进行扩展，其中内部组合了一个 Transform 接口，用于扩展指定的变形金刚

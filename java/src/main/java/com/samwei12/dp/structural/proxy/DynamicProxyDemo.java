@@ -1,4 +1,4 @@
-package com.samwei12.dp.proxy;
+package com.samwei12.dp.structural.proxy;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;
@@ -12,7 +12,7 @@ import java.lang.reflect.Proxy;
 public class DynamicProxyDemo {
     public static void main(String[] args) {
         final NikeClothesFactory nikeClothesFactory = new NikeClothesFactory();
-        final ClothesFactory proxyInstance = (ClothesFactory) ProxyFactory.getProxyInstance(nikeClothesFactory);
+        final ClothesFactory proxyInstance = (ClothesFactory)ProxyFactory.getProxyInstance(nikeClothesFactory);
         proxyInstance.produce();
     }
 }
@@ -20,7 +20,8 @@ public class DynamicProxyDemo {
 class ProxyFactory {
     public static Object getProxyInstance(Object target) {
         final MyInvocationHandler myInvocationHandler = new MyInvocationHandler(target);
-        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(), myInvocationHandler);
+        return Proxy.newProxyInstance(target.getClass().getClassLoader(), target.getClass().getInterfaces(),
+            myInvocationHandler);
     }
 }
 

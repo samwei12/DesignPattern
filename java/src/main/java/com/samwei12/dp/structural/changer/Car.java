@@ -1,4 +1,4 @@
-package com.samwei12.dp.decorator.changer;
+package com.samwei12.dp.structural.changer;
 
 /**
  * ConcreteComponent，具体实现类，提供具体功能，需要被扩展才行;且声明为 final

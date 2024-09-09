@@ -1,4 +1,4 @@
-package com.samwei12.dp.proxy;
+package com.samwei12.dp.structural.proxy;
 
 /**
  * @author samwei12

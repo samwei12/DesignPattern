@@ -1,4 +1,4 @@
-package com.samwei12.dp.decorator.changer;
+package com.samwei12.dp.structural.changer;
 
 /**
  * @author samwei12
